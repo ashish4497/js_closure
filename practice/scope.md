@@ -9,6 +9,9 @@ var knownAs = "no one";
 
 console.log(window.firstName, window.lastName, window.knownAs);
 ```
+undefined
+undefined
+"no one" 
 
 2. Guess the output:
 
@@ -23,6 +26,7 @@ function fullName(a, b) {
 
 console.log(window.fullName(firstName, lastName));
 ```
+Arya Stark
 
 3. Make a Execution Context Diagram for the following JS and write the output.
 
@@ -34,6 +38,7 @@ var one = addOne(0);
 var two = addOne(1);
 console.log(one, two);
 ```
+1 , 2
 
 4. Make a Execution Context Diagram for the following JS and write the output.
 
@@ -45,6 +50,7 @@ fucntion addOne(num){
 var two = addOne(1);
 console.log(one, two);
 ```
+1 , 2
 
 5. Make a Execution Context Diagram for the following JS and write the output.
 
@@ -56,6 +62,7 @@ fucntion addOne(num){
 var two = addOne(1);
 console.log(two);
 ```
+1,2
 
 6. Make a Execution Context Diagram for the following JS and write the output.
 
@@ -67,6 +74,7 @@ const addOne = num => {
 var two = addOne(1);
 console.log(two);
 ```
+can not acess
 
 7. Make a Execution Context Diagram for the following JS and write the output.
 
@@ -78,6 +86,7 @@ const addOne = num => {
 var two = addOne(1);
 console.log(two);
 ```
+canNot acess function expression
 
 8. What will be the output of the following
 
@@ -91,7 +100,7 @@ function isAwesome() {
 }
 isAwesome();
 ```
-
+ false
 9. What will be the output of the following
 
 ```js
@@ -104,6 +113,7 @@ function isAwesome() {
 }
 isAwesome();
 ```
+true
 
 10. What will be the output of the following
 
@@ -117,6 +127,7 @@ function isAwesome() {
 }
 isAwesome();
 ```
+false
 
 11. What will be the output of the following
 
@@ -131,6 +142,7 @@ function fullName(a, b) {
 const name = fullName(firstName, lastName);
 console.log(name);
 ```
+AryaStark
 
 12. What will be the output of the following
 
@@ -145,6 +157,7 @@ function fullName(a, b) {
 const name = fullName(firstName, lastName);
 console.log(name);
 ```
+AryaStark
 
 13. Guess the output of the code below with a reason.
 
@@ -156,6 +169,7 @@ sayHello();
 
 console.log(name);
 ```
+Name is not define becouse bubbleout to search for name
 
 14. Guess the output of the code below with a reason.
 
@@ -165,6 +179,7 @@ if (true) {
 }
 console.log(name);
 ```
+AryaStark
 
 15. Guess the output of the code below with a reason.
 
@@ -174,6 +189,7 @@ if (true) {
 }
 console.log(name);
 ```
+AryaStark
 
 16. Guess the output of the code below with a reason.
 
@@ -181,7 +197,7 @@ console.log(name);
 for (var i = 0; i < 20; i++) {
   //
 }
-console.log(i);
+console.log(i); 20 ++use then send the val
 ```
 
 17. Guess the output of the code below with a reason.
@@ -190,7 +206,7 @@ console.log(i);
 for (let i = 0; i < 20; i++) {
   //
 }
-console.log(i);
+console.log(i);  not define globely
 ```
 
 18. Guess the output of the code below with a reason.
@@ -198,8 +214,10 @@ console.log(i);
 ```js
 for (var i = 0; i < 20; i++) {
   setTimeout(() => console.log(i, "first"), 100);
-}
+  
 console.log(i, "second");
+both are 20 
+
 ```
 
 19. Guess the output of the code below with a reason.
@@ -208,8 +226,10 @@ console.log(i, "second");
 for (let i = 0; i < 20; i++) {
   setTimeout(() => console.log(i, "first"), 100);
 }
-console.log(i, "second");
+console.log(i, "second"); 
 ```
+not define 
+20
 
 20. Guess the output and the reason behind that.
 
@@ -222,6 +242,9 @@ function sample() {
 }
 ```
 
+function not call
+After function call outPut  john Snow
+
 21. Guess the output and the reason behind that.
 
 ```js
@@ -232,6 +255,9 @@ function sample() {
   console.log(username);
 }
 ```
+function not call
+After function call outPut  john Snow
+
 
 22. Guess the output and the reason behind that.
 
@@ -239,11 +265,12 @@ function sample() {
 function sample() {
   var username = "Arya Stark";
   if (true) {
-    var username = "John Snow";
+    var username = "SnowJohn ";
     console.log(username);
   }
   console.log(username, "second");
 }
+SnowJohn becouse ressign the username
 ```
 
 23. Guess the output and the reason behind that.
@@ -254,10 +281,13 @@ function sample() {
   if (true) {
     let username = "John Snow";
     console.log(username, "first");
+ 
   }
   console.log(username, "second");
 }
 ```
+John Snow
+Arya Stark
 
 24. Guess the output and the reason behind that.
 
@@ -271,6 +301,9 @@ function sample(...args) {
 
 sample("First", "Second", "Third");
 ```
+Hello I'm first
+Hello I'm second
+Hello I'm third
 
 25. Guess the output and the reason behind that.
 
@@ -284,6 +317,9 @@ function sample(...args) {
 
 sample("First", "Second", "Third");
 ```
+Hello I'm first
+Hello I'm second
+Hello I'm third
 
 26. Guess the output and the reason behind that.
 
@@ -297,6 +333,7 @@ if (true) {
   myFunc();
 }
 ```
+not a function Expression not acess usename
 
 27. Guess the output and the reason behind that.
 
@@ -304,13 +341,14 @@ if (true) {
 function outer() {
   let movie = "Mad Max: Fury Road";
   function inner() {
-    console.log("I love this movie called ${movie.toUpperCase()}");
+    console.log(`I love this movie called ${movie.toUpperCase()}`);
   }
   inner();
 }
 
 outer();
 ```
+I love this movie called MAD MAX: FURY ROAD
 
 28. Guess the output and the reason behind that.
 
@@ -319,13 +357,14 @@ function outer() {
   let movie = "Mad Max: Fury Road";
   function inner() {
     let movie = "Before Sunrise";
-    console.log("I love this movie called ${movie.toUpperCase()}");
+    console.log(`I love this movie called ${movie.toUpperCase()}`);
   }
   inner();
 }
 
 outer();
 ```
+BEFORE SUNRISE
 
 29. Guess the output and the reason behind that.
 
@@ -336,7 +375,7 @@ function outer() {
     let movie = "Before Sunrise";
     function extraInner() {
       let movie = "Gone Girl";
-      console.log("I love this movie called ${movie.toUpperCase()}");
+      console.log(`I love this movie called ${movie.toUpperCase()}`);
     }
     extraInner();
   }
@@ -345,6 +384,7 @@ function outer() {
 
 outer();
 ```
+GONE GIRL
 
 30. Execute all the functions inside `allFunctions` variable using any loop. (Hint: use for of loop functions are object)
 

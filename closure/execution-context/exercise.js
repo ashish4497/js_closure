@@ -1,26 +1,26 @@
 // Create the execution context flow of the this function
 
-var counter = (function() {
+var counter = (function () {
   var privateCounter = 0;
   function changeBy(val) {
     privateCounter += val;
   }
   return {
-    increment: function() {
+    increment: function () {
       changeBy(1);
     },
-    decrement: function() {
+    decrement: function () {
       changeBy(-1);
     },
-    value: function() {
+    value: function () {
       return privateCounter;
     }
   };
 })();
 
-counter.value();
-counter.increment();
-counter.increment();
-counter.value();
-counter.decrement();
-counter.value();
+counter.value(); 0
+counter.increment(); 1
+counter.increment(); 2
+counter.value(); 2
+counter.decrement(); -1
+counter.value(); 1
