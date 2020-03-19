@@ -7,32 +7,37 @@ console.log(animal);
 var animal = "monkey";
 // Output or Error Message
 ```
+output monkey; becouse define in global scope
 
 ```js
 console.log(animal);
 let animal = "monkey";
 // Output or Error Message
 ```
+animlan no define
 
 ```js
 console.log(animal);
 const animal = "monkey";
 // Output or Error Message
 ```
-
+animlan no define
 ```js
-function sayHello(msg) {
-  alert(msg);
-}
-sayHello("Hey Everyone");
+  function sayHello(msg) {
+    alert(msg);
+  }
+  sayHello("Hey Everyone");
 // Output or Error Message
 ```
+"Hey Everyone"
 
 ```js
 sayHello("Hey Everyone");
 function sayHello(msg) {
   alert(msg);
 }
+
+not called 
 // Output or Error Message
 ```
 
@@ -43,10 +48,11 @@ var sayHello = msg => {
 };
 // Output or Error Message
 ```
-
+  not call becouse call first then define 
 ```js
 sayHello("Hey Everyone");
 let sayHello = msg => {
   alert(msg);
 };
 ```
+ not call becouse call first then define 

@@ -7,6 +7,12 @@
 	   alert(string);
 	 };
 	 ```
+	function nonsense(sting){
+		function blab(){
+			alert(string);
+			nonsense();
+		}
+	}
 
 1. In your function, `nonsense`, change the immediate call to a setTimeout so that the call to `blab` comes after 2 seconds. The `blab` function itself should stay the same as before.
 
